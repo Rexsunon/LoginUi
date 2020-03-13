@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui/screens/login.dart';
+import 'package:login_ui/screens/sign_up.dart';
 import 'package:login_ui/screens/splash_screen.dart';
 
 void main() => runApp(MyApp());
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        Login.id: (context) => Login(),
+        SignUp.id: (context) => SignUp()
+      },
       home: SplashScreen(),
     );
   }

@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-//    SystemChrome.setEnabledSystemUIOverlays([]);
+
     startTimeout();
   }
 
@@ -40,7 +40,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.green,
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          image: DecorationImage(
+            image: AssetImage("assets/images/bg.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Center(
           child: Column(
 //        mainAxisSize: MainAxisSize.max,
@@ -49,7 +55,11 @@ class _SplashScreenState extends State<SplashScreen> {
             children: <Widget>[
               Hero(
                 tag: 'logo',
-                child: Image.asset("assets/images/logo.png"),
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  child: Image.asset("assets/images/logo.png"),
+                ),
               ),
               SizedBox(
                 height: 20,
