@@ -1,6 +1,20 @@
 # login_ui
 
-A new Flutter application.
+A basic flutter ui application. Inspiration from UpLabs
+
+## 📸 Screenshots
+
+| First Screen| Second Screen|
+|------|-------|
+|<img src="screenshots/Screenshot_1.png" width="400">|<img src="screenshots/Screenshot_2.png" width="400">|
+
+Feel free to make any changes or updates
+
+## ✨ Requirements
+* Any Operating System (ie. MacOS X, Linux, Windows)
+* Any IDE installed that supports the Android SDK (ie. IntelliJ, Android Studio, Vscode etc)
+* A little knowledge of Dart and Flutter
+* A brain to think 🤓🤓
 
 ## Getting Started
 
