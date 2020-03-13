@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:login_ui/screens/login.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -12,11 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTimeout() {
-    return Timer(Duration(seconds: 2), handleTimeout);
-  }
-
-  void handleTimeout() {
-    changeScreen();
+    return Timer(Duration(seconds: 2), changeScreen);
   }
 
   changeScreen() async {
