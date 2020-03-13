@@ -67,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Text(
                 "LoginUi",
                 style: TextStyle(
-                  color: Theme.of(context).accentColor,
+                  color: Colors.white,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
