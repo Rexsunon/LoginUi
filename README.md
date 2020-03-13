@@ -12,9 +12,12 @@ Feel free to make any changes or updates
 
 ## ✨ Requirements
 * Any Operating System (ie. MacOS X, Linux, Windows)
-* Any IDE installed that supports the Android SDK (ie. IntelliJ, Android Studio, Vscode etc)
+* Any IDE installed that supports the Flutter SDK (ie. IntelliJ, Android Studio, Vscode etc)
 * A little knowledge of Dart and Flutter
 * A brain to think 🤓🤓
+
+## 🤓 Author(s)
+**Evidence Rex Osikhena**
 
 ## Getting Started
 
@@ -28,3 +31,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## LICENCE
+[WTFPL](http://www.wtfpl.net/about/)
