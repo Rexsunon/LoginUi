@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
               ),
               SizedBox(height: 30.0),
               Text(
-                "Welcom back\nlogin".toUpperCase(),
+                "Welcome back\nlogin".toUpperCase(),
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
