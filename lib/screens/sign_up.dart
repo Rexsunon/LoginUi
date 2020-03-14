@@ -5,7 +5,8 @@ import 'package:login_ui/widgets/text_Field.dart';
 import 'login.dart';
 
 class SignUp extends StatefulWidget {
-  static const String id = "Login";
+  static const String id = "Signup";
+
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -16,15 +17,16 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: Container(
         padding: EdgeInsets.all(30.0),
         decoration: BoxDecoration(
           color: Colors.transparent,
           image: DecorationImage(
-            image: AssetImage("assets/images/bg.png"),
-            fit: BoxFit.cover,
-          ),
+              image: AssetImage("assets/images/bg.png"),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  Color(0xFF222222).withOpacity(0.2), BlendMode.srcOver)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,7 +81,7 @@ class _SignUpState extends State<SignUp> {
               isPassword: _isPassword,
               inputType: TextInputType.visiblePassword,
               passwordVisibility:
-              _isPassword ? Icons.visibility : Icons.visibility_off,
+                  _isPassword ? Icons.visibility : Icons.visibility_off,
               showPassword: () {
                 setState(() {
                   _isPassword = !_isPassword;
@@ -134,13 +136,12 @@ class _SignUpState extends State<SignUp> {
                         fontSize: 15.0,
                         decoration: TextDecoration.underline,
                         decorationColor: Colors.white,
-                        decorationThickness: 2.0
-                    ),
+                        decorationThickness: 2.0),
                   )
                 ],
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, Login.id);
               },
             ),
           ],
@@ -149,4 +150,3 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
-

@@ -7,6 +7,7 @@ import 'sign_up.dart';
 
 class Login extends StatefulWidget {
   static const String id = "Login";
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -17,16 +18,17 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: Container(
           padding: EdgeInsets.all(30.0),
           decoration: BoxDecoration(
             color: Colors.transparent,
             image: DecorationImage(
-              image: AssetImage("assets/images/bg.png"),
-              fit: BoxFit.cover,
-            ),
+                image: AssetImage("assets/images/bg.png"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Color(0xFF222222).withOpacity(0.2), BlendMode.srcOver)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -128,13 +130,12 @@ class _LoginState extends State<Login> {
                     Text(
                       "Create Now",
                       style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15.0,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                        decorationThickness: 2.0
-                      ),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15.0,
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
+                          decorationThickness: 2.0),
                     ),
                     SizedBox(width: 5.0),
                     Icon(
@@ -144,7 +145,7 @@ class _LoginState extends State<Login> {
                   ],
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, SignUp.id);
+                  Navigator.pushReplacementNamed(context, SignUp.id);
                 },
               ),
             ],

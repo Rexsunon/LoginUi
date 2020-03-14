@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:login_ui/screens/login.dart';
 import 'package:page_transition/page_transition.dart';
@@ -35,11 +36,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           color: Colors.transparent,
           image: DecorationImage(
             image: AssetImage("assets/images/bg.png"),
             fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(Color(0xFF222222).withOpacity(0.2), BlendMode.srcOver)
           ),
         ),
         child: Center(
