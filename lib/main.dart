@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/screens/forgot_password.dart';
 import 'package:login_ui/screens/login.dart';
 import 'package:login_ui/screens/sign_up.dart';
 import 'package:login_ui/screens/splash_screen.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         Login.id: (context) => Login(),
-        SignUp.id: (context) => SignUp()
+        SignUp.id: (context) => SignUp(),
+        ForgotPassword.id: (context) => ForgotPassword()
       },
       home: SplashScreen(),
     );

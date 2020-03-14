@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:login_ui/screens/forgot_password.dart';
 import 'package:login_ui/widgets/gradient_button.dart';
 import 'package:login_ui/widgets/text_Field.dart';
 
@@ -89,13 +90,18 @@ class _LoginState extends State<Login> {
                 onPress: () {},
               ),
               SizedBox(height: 30.0),
-              Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15.0,
+              InkWell(
+                child: Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15.0,
+                  ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, ForgotPassword.id);
+                },
               ),
               SizedBox(height: 20.0),
               SizedBox(
